@@ -1,0 +1,66 @@
+Git :
+
+Pobieramy : 
+
+https://git-scm.com/downloads
+
+Jeżeli nie mamy jeszcze repozytorium to  
+
+W katalogu pustym lub w takim, gdzie są dane:
+
+git init
+
+
+Jeżeli mamy już na serwerze katalog git to:
+
+git clone ssh://artur@194.247.41.28:223/home/artur/git/[NAZWAAPLIKACJI]
+
+Jeżeli problem : 
+``` 
+defaults delete com.apple.dt.xcode DVTSourceControlAccountDefaultsKey
+
+defaults delete com.apple.dt.xcode IDESourceControlKnownSSHHostsDefaultsKey
+
+sudo killall ssh-agent
+
+
+```
+I uruchomić ponownie Xcode
+
+Następnie:
+
+git config --global user.name <YOUR_NAME>
+git config --global user.email <YOUR_EMAIL>
+
+I sprawdzamy: 
+
+git config --global -l
+
+Jak rozpoczynamy pracę dobrze jest zrobić zawsze, żeby pobrać aktualną wersję:
+
+git pull 
+
+
+Po każdych zmianach:
+
+git status
+
+
+lub/i: 
+git add .
+
+git commit -a -m „I nasz komentarz”
+
+Następnie: 
+
+git push
+
+
+Jak chcemy pracować na innej gałęzi niż główna to:
+
+git branch nazwabranch
+
+i
+
+git checkout nazwabranch
+
